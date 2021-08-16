@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import FriendListFragment from './FriendListFragment';
-
+import f from './FriendList.module.css';
 function FriendList({ friends }) {
   return (
-    <ul>
+    <ul className={f.list}>
       {friends.map(({ id, avatar, name, isOnline }) => (
-        <li key={id}>
+        <li key={id} className={f.item}>
           <FriendListFragment avatar={avatar} name={name} isOnline={isOnline} />
         </li>
       ))}
